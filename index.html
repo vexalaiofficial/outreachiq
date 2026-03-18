@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutreachIQ — Emails That Actually Get Replies</title>
+    <style>
+        :root {
+            --bg: #fafafa;
+            --surface: #fff;
+            --border: #e5e5e5;
+            --text: #111;
+            --text-dim: #666;
+            --accent: #0066cc;
+            --accent-hover: #0052a3;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        .logo {
+            font-weight: 800;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--accent); }
+        h1 {
+            font-size: clamp(32px, 7vw, 56px);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            letter-spacing: -1.5px;
+        }
+        .hero-text {
+            font-size: 18px;
+            color: var(--text-dim);
+            max-width: 520px;
+            margin-bottom: 40px;
+        }
+        .stats {
+            display: flex;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        .stat {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-dim);
+            margin-top: 8px;
+        }
+        .quote {
+            background: var(--surface);
+            border-left: 4px solid var(--accent);
+            padding: 24px 28px;
+            margin: 32px 0;
+            font-style: italic;
+            color: var(--text-dim);
+            font-size: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .quote-author {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 12px;
+            font-size: 13px;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 40px 0;
+        }
+        .comp-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+        }
+        .comp-box.bad {
+            border-color: #ffcccc;
+            background: #fffafa;
+        }
+        .comp-box.good {
+            border-color: #cce5ff;
+            background: #f0f7ff;
+        }
+        .comp-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .comp-box.bad .comp-label { color: #cc0000; }
+        .comp-box.good .comp-label { color: var(--accent); }
+        .comp-box p {
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+        .price-section {
+            background: var(--surface);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 48px;
+        }
+        .price {
+            font-size: 56px;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+        .price span {
+            font-size: 18px;
+            color: var(--text-dim);
+            font-weight: 400;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 18px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            margin-top: 24px;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover {
+            background: var(--accent-hover);
+        }
+        .email-input {
+            display: flex;
+            gap: 12px;
+            max-width: 400px;
+            margin: 24px auto 0;
+        }
+        .email-input input {
+            flex: 1;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        .email-input button {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Outreach<span>IQ</span></div>
+        </header>
+        
+        <h1>Cold emails that<br>get replies</h1>
+        <p class="hero-text">We scan what your prospects are actually talking about online — then write emails that feel personal, not robotic.</p>
+        
+        <div class="stats">
+            <div>
+                <div class="stat">47%</div>
+                <div class="stat-label">Avg. reply rate (vs 2%)</div>
+            </div>
+            <div>
+                <div class="stat">10x</div>
+                <div class="stat-label">More meetings booked</div>
+            </div>
+        </div>
+        
+        <div class="quote">
+            "We're sending 500 emails/week with 'personalization' (first name, company) but reply rate is under 2%. Everyone says cold email is dead."
+            <div class="quote-author">— r/startups</div>
+        </div>
+        
+        <div class="comparison">
+            <div class="comp-box bad">
+                <div class="comp-label">❌ Generic</div>
+                <p>Hi {first_name}, I noticed {company} is growing fast and thought you'd be interested in...</p>
+            </div>
+            <div class="comp-box good">
+                <div class="comp-label">✅ With OutreachIQ</div>
+                <p>Hey Sarah — saw your post about struggling with churn on r/SaaS. Here's what worked for us...</p>
+            </div>
+        </div>
+        
+        <div class="price-section">
+            <div class="price">$49<span>/month</span></div>
+            <p style="color: var(--text-dim); margin-top: 8px;">No credit card required to start</p>
+            <div class="email-input">
+                <input type="email" placeholder="Your email" required>
+                <button>Join Waitlist</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
